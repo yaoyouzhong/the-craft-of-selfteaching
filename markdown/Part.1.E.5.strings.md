@@ -83,7 +83,8 @@ print(
 Simple is better than complex.
 Complex is better than complicated.
 """
-) #用 print() 输出的时候，\n 就是不可见字符，字符串本身如下：
+) 
+# 用 print() 输出的时候，\n 就是不可见字符，字符串本身如下：
 # '\nSimple is better than complex.\nComplex is better than complicated.\n'
 # 其中的 \n 被打印出来的时候显示成换行
 ```
@@ -511,10 +512,11 @@ s.lower().count('mp', 10, 30)
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 
-# str.find(sub[, start[, end]])
-print('Example of str.find():')
 s = """Simple is better than complex.
 Complex is better than complicated."""
+
+print('Example of str.find():')
+# str.find(sub[, start[, end]])
 s.lower().find('mpl')
 s.lower().find('mpl', 10)
 s.lower().find('mpl', 10, 20) # 没有找到就返回 -1
@@ -600,7 +602,7 @@ print('mpl' in s)
 
 > `str.replace(old, new[, count])`
 
-用 `new` 替换 `old`，替换 `count` 个实例（实例：exmpale，每次处理的对象就是实例，即具体的操作对象），其中，`count` 这个参数是可选的。
+用 `new` 替换 `old`，替换 `count` 个实例（实例：example，每次处理的对象就是实例，即具体的操作对象），其中，`count` 这个参数是可选的。
 
 ```python
 s = """Simple is better than complex.
@@ -1036,7 +1038,7 @@ Python 针对数字常用的操作符和内建函数，按照**优先级**从低
 Python 用来处理数值的内建函数：
 
 > * `abs(n)` 函数返回参数 `n` 的*绝对值*；
-> * `int(n)` 用来将*浮点数字* `n` 换成*整数*；
+> * `int(n)` 用来将*浮点数字* `n` 转换成*整数*；
 > * `float(n)` 用来将*整数* `n` 转换成*浮点数字*；
 > * `divmod(n, m)` 用来计算  `n`  除以  `m`，返回两个整数，一个是*商*，另外一个是*余*；
 > * `pow(n, m)` 用来做乘方运算，返回 `n` 的 `m` *次方*；
